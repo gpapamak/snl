@@ -1,0 +1,65 @@
+
+experiment
+{
+	sim: hodgkin_huxley,
+	inf: synth_lik
+	{
+		mcmc: slice_sampler
+		{
+		    n_samples: 1000
+		},
+		n_sims: 25
+	}
+}
+
+experiment
+{
+	sim: hodgkin_huxley,
+	inf: synth_lik
+	{
+		mcmc: slice_sampler
+		{
+		    n_samples: 1000
+		},
+		n_sims: 50
+	}
+}
+
+experiment
+{
+	sim: hodgkin_huxley,
+	inf: synth_lik
+	{
+		mcmc: slice_sampler
+		{
+		    n_samples: 1000
+		},
+		n_sims: 75
+	}
+}
+
+experiment
+{
+	sim: hodgkin_huxley,
+	inf: synth_lik
+	{
+		mcmc: slice_sampler
+		{
+		    n_samples: 1000
+		},
+		n_sims: 100
+	}
+}
+
+experiment
+{
+	sim: hodgkin_huxley,
+	inf: synth_lik
+	{
+		mcmc: slice_sampler
+		{
+		    n_samples: 1000
+		},
+		n_sims: 200
+	}
+}

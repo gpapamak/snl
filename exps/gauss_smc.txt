@@ -1,0 +1,12 @@
+
+experiment
+{
+	sim: gauss,
+	inf: smc_abc
+	{
+		n_samples: 1000,
+		eps_init: 5.0,
+		eps_last: 0.5,
+		eps_decay: 0.9
+	}
+}

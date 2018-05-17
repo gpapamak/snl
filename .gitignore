@@ -1,0 +1,17 @@
+
+# experiments and results
+data/experiments
+data/results
+
+# neuron files
+x86_64
+
+# pycharm files
+.idea/
+
+# python bytecode files
+*.pyc
+
+# text editor's temporary files
+*~
+

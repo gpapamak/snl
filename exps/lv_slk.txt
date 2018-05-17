@@ -1,0 +1,52 @@
+
+experiment
+{
+	sim: lotka_volterra,
+	inf: synth_lik
+	{
+		mcmc: slice_sampler
+		{
+		    n_samples: 1000
+		},
+		n_sims: 15
+	}
+}
+
+experiment
+{
+	sim: lotka_volterra,
+	inf: synth_lik
+	{
+		mcmc: slice_sampler
+		{
+		    n_samples: 1000
+		},
+		n_sims: 30
+	}
+}
+
+experiment
+{
+	sim: lotka_volterra,
+	inf: synth_lik
+	{
+		mcmc: slice_sampler
+		{
+		    n_samples: 1000
+		},
+		n_sims: 60
+	}
+}
+
+experiment
+{
+	sim: lotka_volterra,
+	inf: synth_lik
+	{
+		mcmc: slice_sampler
+		{
+		    n_samples: 1000
+		},
+		n_sims: 120
+	}
+}

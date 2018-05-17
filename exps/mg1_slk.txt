@@ -1,0 +1,66 @@
+
+experiment
+{
+	sim: mg1,
+	inf: synth_lik
+	{
+		mcmc: slice_sampler
+		{
+		    n_samples: 1000
+		},
+		n_sims: 10
+	}
+}
+
+experiment
+{
+	sim: mg1,
+	inf: synth_lik
+	{
+		mcmc: slice_sampler
+		{
+		    n_samples: 1000
+		},
+		n_sims: 30
+	}
+}
+
+experiment
+{
+	sim: mg1,
+	inf: synth_lik
+	{
+		mcmc: slice_sampler
+		{
+		    n_samples: 1000
+		},
+		n_sims: 100
+	}
+}
+
+experiment
+{
+	sim: mg1,
+	inf: synth_lik
+	{
+		mcmc: slice_sampler
+		{
+		    n_samples: 1000
+		},
+		n_sims: 300
+	}
+}
+
+experiment
+{
+	sim: mg1,
+	inf: synth_lik
+	{
+		mcmc: slice_sampler
+		{
+		    n_samples: 1000
+		},
+		n_sims: 1000
+	}
+}
+

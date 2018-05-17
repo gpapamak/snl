@@ -1,0 +1,18 @@
+
+experiment
+{
+	sim: hodgkin_huxley,
+	inf: snl
+	{
+		model: maf
+		{
+		    n_hiddens: [50, 50],
+		    act_fun: tanh,
+		    n_comps: 5
+		},
+		n_samples: 1000,
+		n_rounds: 10,
+		train_on: all,
+		thin: 1
+	}
+}

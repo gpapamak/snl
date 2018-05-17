@@ -1,0 +1,54 @@
+
+experiment
+{
+	sim: gauss,
+	inf: post_prop
+	{
+		model: mdn
+		{
+		    n_hiddens: [50, 50],
+		    act_fun: tanh,
+		    n_comps: 8
+		},
+		n_samples_p: 1000,
+		n_rounds_p: 5,
+		maxepochs_p: 1000,
+		n_samples_f: 2000,
+		maxepochs_f: 5000
+	}
+}
+
+experiment
+{
+	sim: gauss,
+	inf: snpe_mdn
+	{
+		model: mdn
+		{
+		    n_hiddens: [50, 50],
+		    act_fun: tanh,
+		    n_comps: 8
+		},
+		n_samples: 1000,
+		n_rounds: 40,
+		maxepochs: 1000
+	}
+}
+
+experiment
+{
+	sim: gauss,
+	inf: snl
+	{
+		model: maf
+		{
+		    n_hiddens: [50, 50],
+		    act_fun: tanh,
+		    n_comps: 5
+		},
+		n_samples: 1000,
+		n_rounds: 40,
+		train_on: all,
+		thin: 10
+	}
+}
