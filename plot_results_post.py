@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import util.io
 import util.plot
 
-from plot_results_loglik import get_sim, ed, get_samples_snl
+from plot_results_lprob import get_sim, ed, get_samples_snl
 from plot_results_mmd import get_true_samples
 
 
