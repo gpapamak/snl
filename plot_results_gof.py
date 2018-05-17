@@ -82,7 +82,7 @@ def view_samples_nde(sim_name, which=None, use_lims=True):
 
     lims = get_disp_lims() if use_lims else None
 
-    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_nde.txt'.format(sim_name))):
+    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_nl.txt'.format(sim_name))):
 
         if which is not None and exp_desc.inf.n_samples != which:
             continue
@@ -106,7 +106,7 @@ def view_samples_snl(sim_name, which=None, use_lims=True):
 
     lims = get_disp_lims() if use_lims else None
 
-    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_prop.txt'.format(sim_name))):
+    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_seq.txt'.format(sim_name))):
 
         if isinstance(exp_desc.inf, ed.SNL_Descriptor):
 
@@ -251,14 +251,14 @@ def plot_results(sim_name):
     # NDE
     all_err_nde = []
     all_n_sims_nde = []
-    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_nde.txt'.format(sim_name))):
+    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_nl.txt'.format(sim_name))):
         all_err_nde.append(get_err_nde(exp_desc))
         all_n_sims_nde.append(exp_desc.inf.n_samples)
 
     all_err_snl = None
     all_n_sims_snl = None
 
-    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_prop.txt'.format(sim_name))):
+    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_seq.txt'.format(sim_name))):
 
         # SNL
         if isinstance(exp_desc.inf, ed.SNL_Descriptor):

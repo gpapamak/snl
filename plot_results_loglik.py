@@ -101,7 +101,7 @@ def view_samples_nde(sim_name):
 
     true_ps, _ = sim.get_ground_truth()
 
-    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_nde.txt'.format(sim_name))):
+    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_nl.txt'.format(sim_name))):
 
         samples = get_samples_nde(exp_desc, sim)
 
@@ -120,7 +120,7 @@ def view_samples_snl(sim_name):
 
     true_ps, _ = sim.get_ground_truth()
 
-    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_prop.txt'.format(sim_name))):
+    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_seq.txt'.format(sim_name))):
 
         if isinstance(exp_desc.inf, ed.SNL_Descriptor):
 
@@ -142,7 +142,7 @@ def view_samples_sl(sim_name):
 
     true_ps, _ = sim.get_ground_truth()
 
-    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_slk.txt'.format(sim_name))):
+    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_sl.txt'.format(sim_name))):
 
         exp_dir = os.path.join(root, 'experiments', exp_desc.get_dir(), '0')
         samples, _ = util.io.load(os.path.join(exp_dir, 'results'))
@@ -365,7 +365,7 @@ def plot_results(sim_name):
     # SL
     all_err_slk = []
     all_n_sims_slk = []
-    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_slk.txt'.format(sim_name))):
+    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_sl.txt'.format(sim_name))):
         err, n_sims = get_err_sl(exp_desc, sim)
         all_err_slk.append(err)
         all_n_sims_slk.append(n_sims)
@@ -373,7 +373,7 @@ def plot_results(sim_name):
     # NDE
     all_err_nde = []
     all_n_sims_nde = []
-    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_nde.txt'.format(sim_name))):
+    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_nl.txt'.format(sim_name))):
         all_err_nde.append(get_err_nde(exp_desc, sim))
         all_n_sims_nde.append(exp_desc.inf.n_samples)
 
@@ -386,7 +386,7 @@ def plot_results(sim_name):
     all_err_snl = None
     all_n_sims_snl = None
 
-    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_prop.txt'.format(sim_name))):
+    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_seq.txt'.format(sim_name))):
 
         # Post Prop
         if isinstance(exp_desc.inf, ed.PostProp_Descriptor):

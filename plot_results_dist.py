@@ -72,7 +72,7 @@ def plot_results(sim_name, average):
     all_dist_snp = None
     all_dist_snl = None
 
-    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_prop.txt'.format(sim_name))):
+    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_seq.txt'.format(sim_name))):
 
         # Post Prop
         if isinstance(exp_desc.inf, ed.PostProp_Descriptor):

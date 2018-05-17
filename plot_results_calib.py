@@ -177,7 +177,7 @@ def plot_results(sim_name, prior):
     matplotlib.rc('font', size=15 if sim_name == 'lv' else 14)
 
     # SNL
-    txt = util.io.load_txt('exps/{0}_trials.txt'.format(sim_name))
+    txt = util.io.load_txt('exps/{0}_calib.txt'.format(sim_name))
 
     for exp_desc in ed.parse(txt):
 

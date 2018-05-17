@@ -62,7 +62,7 @@ def plot_results(sim_name):
     matplotlib.rc('text', usetex=True)
     matplotlib.rc('font', size=16)
 
-    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_prop.txt'.format(sim_name))):
+    for exp_desc in ed.parse(util.io.load_txt('exps/{0}_seq.txt'.format(sim_name))):
 
         if isinstance(exp_desc.inf, ed.SNL_Descriptor):
 

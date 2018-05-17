@@ -132,7 +132,7 @@ def view_samples_nde():
     Plots MCMC samples for all NDE experiments.
     """
 
-    for exp_desc in ed.parse(util.io.load_txt('exps/gauss_nde.txt')):
+    for exp_desc in ed.parse(util.io.load_txt('exps/gauss_nl.txt')):
 
         samples = get_samples_nde(exp_desc)
 
@@ -147,7 +147,7 @@ def view_samples_snl():
     Plots MCMC samples for all SNL experiments.
     """
 
-    for exp_desc in ed.parse(util.io.load_txt('exps/gauss_prop.txt')):
+    for exp_desc in ed.parse(util.io.load_txt('exps/gauss_seq.txt')):
 
         if isinstance(exp_desc.inf, ed.SNL_Descriptor):
 
@@ -165,7 +165,7 @@ def view_samples_sl():
     Plots MCMC samples for all synth likelihood experiments.
     """
 
-    for exp_desc in ed.parse(util.io.load_txt('exps/gauss_slk.txt')):
+    for exp_desc in ed.parse(util.io.load_txt('exps/gauss_sl.txt')):
 
         exp_dir = os.path.join(root, 'experiments', exp_desc.get_dir(), '0')
         samples, _ = util.io.load(os.path.join(exp_dir, 'results'))
@@ -365,7 +365,7 @@ def plot_results():
     # SL
     all_mmd_slk = []
     all_n_sims_slk = []
-    for exp_desc in ed.parse(util.io.load_txt('exps/gauss_slk.txt')):
+    for exp_desc in ed.parse(util.io.load_txt('exps/gauss_sl.txt')):
         mmd, n_sims = get_mmd_sl(exp_desc)
         all_mmd_slk.append(mmd)
         all_n_sims_slk.append(n_sims)
@@ -373,7 +373,7 @@ def plot_results():
     # NDE
     all_mmd_nde = []
     all_n_sims_nde = []
-    for exp_desc in ed.parse(util.io.load_txt('exps/gauss_nde.txt')):
+    for exp_desc in ed.parse(util.io.load_txt('exps/gauss_nl.txt')):
         all_mmd_nde.append(get_mmd_nde(exp_desc))
         all_n_sims_nde.append(exp_desc.inf.n_samples)
 
@@ -386,7 +386,7 @@ def plot_results():
     all_mmd_snl = None
     all_n_sims_snl = None
 
-    for exp_desc in ed.parse(util.io.load_txt('exps/gauss_prop.txt')):
+    for exp_desc in ed.parse(util.io.load_txt('exps/gauss_seq.txt')):
 
         # Post Prop
         if isinstance(exp_desc.inf, ed.PostProp_Descriptor):
