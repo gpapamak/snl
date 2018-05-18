@@ -12,7 +12,7 @@ File           | Experiments
 `lv_sl.txt`    | Synthetic Likelihood
 `lv_calib.txt` | Calibration experiment for SNL
 
-Replace `lv` with `gauss` for the toy Gaussian model, `mg1` for the M/G/1 queue, or `hh` for Hodgkin-Huxley.
+Replace `lv` with `gauss` for the toy Gaussian model, `mg1` for the M/G/1 queue, or `hh` for Hodgkin-Huxley.  Note that to run the Hodgkin-Huxley simulation, it is necessary to install NEURON; see [How to install NEURON](#how-to-install-neuron).
 
 You can run all experiments in file `lv_nl.txt` by:
 ```
@@ -58,3 +58,12 @@ Command                                | Figure it reproduces
 `python plot_results_post.py <sim>`    | Posterior histograms and pairwise scatter plots for SNL
 
 Here, `<sim>` can be any of `gauss`, `mg1`, `lv`, or `hh`. The first time you run one of the above it may take a long time, because the code will be calculating lots of intermediate results, such as MCMC samples, MMDs, etc. All intermediate results will be saved in folder `data/results` for future use. The second time you run it, the figures should appear immediately.
+
+## How to install NEURON
+
+The SNL code has been tested with NEURON on Scientific Linux 7.3. The
+following steps should work:
+
+1. Install NEURON 7.5 from using the 64 bit .deb (Debian or Ubuntu) or .rpm (Fedora derivatives) precompiled installer from https://neuron.yale.edu/neuron/download/precompiled-installers
+
+2. Set `PYTHONPATH=/usr/local/nrn/lib/python:$PYTHONPATH`
