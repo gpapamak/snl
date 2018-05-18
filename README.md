@@ -61,9 +61,10 @@ Here, `<sim>` can be any of `gauss`, `mg1`, `lv`, or `hh`. The first time you ru
 
 ## How to install NEURON
 
-The SNL code has been tested with NEURON on Scientific Linux 7.3. The
-following steps should work:
+The SNL code has been tested with NEURON on Scientific Linux 7.3. The following steps should allow the code to run on multiple versions of Linux:
 
 1. Install NEURON 7.5 from using the 64 bit .deb (Debian or Ubuntu) or .rpm (Fedora derivatives) precompiled installer from https://neuron.yale.edu/neuron/download/precompiled-installers
 
 2. Set `PYTHONPATH=/usr/local/nrn/lib/python:$PYTHONPATH`
+
+3. In this directory run `nrnivmodl`, which will compile the `.mod` files into an executable file in a new directory, `x86_64`.
