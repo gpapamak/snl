@@ -1,5 +1,10 @@
 # Sequential Neural Likelihood
 
+Code for reproducing the experiments in the paper:
+
+> G. Papamakarios, D. C. Sterratt, I. Murray. _Sequential Neural Likelihood: Fast Likelihood-free Inference with Autoregressive Flows_. arXiv:1805.07226. 2018.
+> [[pdf]](https://arxiv.org/pdf/1805.07226.pdf) [[bibtex]](http://homepages.inf.ed.ac.uk/s1459647/bibtex/snl.bib)
+
 ## How to run the experiments
 
 Each file in folder `exps` contains the description of one or more experiments. Using Lotka-Volterra as an example, the files are organized like this:
