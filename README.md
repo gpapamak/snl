@@ -2,7 +2,7 @@
 
 Code for reproducing the experiments in the paper:
 
-> G. Papamakarios, D. C. Sterratt, I. Murray, _Sequential Neural Likelihood: Fast Likelihood-free Inference with Autoregressive Flows_, Proceedings of the 22nd International Conference on Artificial Intelligence and Statistics, 2019.
+> G. Papamakarios, D. C. Sterratt, I. Murray, _Sequential Neural Likelihood: Fast Likelihood-free Inference with Autoregressive Flows_, AISTATS 2019.
 > [[arXiv]](https://arxiv.org/abs/1805.07226) [[bibtex]](https://gpapamak.github.io/bibtex/snl.bib)
 
 ## How to run the experiments
